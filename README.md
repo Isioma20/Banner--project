@@ -1,5 +1,3 @@
-Update README
-Content
 A simple frontend project with an interactive banner and form controls. 
 ## Features 
 - Full width banner with content about a favorite hobby/interest 

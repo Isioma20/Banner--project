@@ -1,6 +1,6 @@
 A simple frontend project with an interactive banner and form controls. 
 ## Features 
-- Full width banner with content about a favorite hobby/interest 
+- Full width dynamic banner about my favourite hobby: Reading books.
 - Interactive form to change banner appearance 
 - Real-time updates without page reload 
 - Unit testing with Jest 

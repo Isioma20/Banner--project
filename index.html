@@ -1,103 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Interactive Banner - My Favorite Hobby</title>
-    <link rel="stylesheet" href="/src/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="container">
-      <section id="banner" class="banner">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Banner - My Favorite Hobby</title>
+  <link rel="stylesheet" href="/src/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="container">
+    <section id="banner" class="banner banner-flex">
+      <div>
         <h1 id="banner-title">
-          Books are the gateway to the minds that produce great things
+          Books are the gateway to the mind
         </h1>
         <p id="banner-text">
-          Reading transports me to endless universes and perspectives. Through
+        Through
           books, I discover new ideas, cultures, and emotions that enrich my
           understanding of the world. I can take a sneak peak into the minds of others and explore their thoughts.
         </p>
-        <img
-          id="banner-image"
-          src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?q=80&w=1000"
-          alt="Stack of books with reading glasses"
-        />
-      </section>
+      </div>
+      <div>
+        <img id="banner-image" src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?q=80&w=500"
+          alt="Stack of books with reading glasses" />
+      </div>
+    </section>
 
-      <section class="controls">
-        <h2>Customize Your Banner</h2>
-        <form id="banner-controls">
-          <div class="form-group">
-            <label for="background-color">Background Color</label>
-            <input type="color" id="background-color" value="#2563eb" />
+    <section class="controls">
+      <h2>Customize Your Banner</h2>
+      <form id="banner-controls">
+        <div class="form-group">
+          <label for="background-color">Background Color</label>
+          <input type="color" id="background-color" value="#2563eb" />
+        </div>
+
+        <div class="form-group">
+          <label for="text-color">Text Color</label>
+          <input type="color" id="text-color" value="#ffffff" />
+        </div>
+
+        <div class="form-group">
+          <label for="custom-text">Banner Text</label>
+          <textarea id="custom-text" placeholder="Write something inspiring about reading..."></textarea>
+        </div>
+
+        <div class="form-group image-control">
+          <label>Banner Image</label>
+
+          <div class="image-input-tabs">
+            <button type="button" class="tab-btn active" data-tab="url">
+              Image URL
+            </button>
+            <button type="button" class="tab-btn" data-tab="upload">
+              Upload Image
+            </button>
           </div>
 
-          <div class="form-group">
-            <label for="text-color">Text Color</label>
-            <input type="color" id="text-color" value="#ffffff" />
+          <div class="tab-content active" id="url-tab">
+            <input type="url" id="image-url" placeholder="Enter image URL (e.g., https://example.com/image.jpg)"
+              class="image-input" />
           </div>
 
-          <div class="form-group">
-            <label for="custom-text">Banner Text</label>
-            <textarea
-              id="custom-text"
-              placeholder="Write something inspiring about reading..."
-            ></textarea>
+          <div class="tab-content" id="upload-tab">
+            <label for="image-upload" class="file-upload-label">
+              <span>Choose a file</span>
+              <input type="file" id="image-upload" accept="image/*" class="file-input" />
+            </label>
+            <span id="file-name" class="file-name">No file chosen</span>
           </div>
 
-          <div class="form-group image-control">
-            <label>Banner Image</label>
-
-            <div class="image-input-tabs">
-              <button type="button" class="tab-btn active" data-tab="url">
-                Image URL
-              </button>
-              <button type="button" class="tab-btn" data-tab="upload">
-                Upload Image
-              </button>
-            </div>
-
-            <div class="tab-content active" id="url-tab">
-              <input
-                type="url"
-                id="image-url"
-                placeholder="Enter image URL (e.g., https://example.com/image.jpg)"
-                class="image-input"
-              />
-            </div>
-
-            <div class="tab-content" id="upload-tab">
-              <label for="image-upload" class="file-upload-label">
-                <span>Choose a file</span>
-                <input
-                  type="file"
-                  id="image-upload"
-                  accept="image/*"
-                  class="file-input"
-                />
-              </label>
-              <span id="file-name" class="file-name">No file chosen</span>
-            </div>
-
-            <div id="image-preview" class="image-preview">
-              <img id="preview-img" src="#" alt="Preview" />
-            </div>
+          <div id="image-preview" class="image-preview">
+            <img id="preview-img" src="#" alt="Preview" />
           </div>
+        </div>
 
-          <div class="button-group">
-            <button type="button" id="apply-changes">Apply Changes</button>
-            <button type="button" id="reset">Reset</button>
-          </div>
-        </form>
-      </section>
-    </div>
+        <div class="button-group">
+          <button type="button" id="apply-changes">Apply Changes</button>
+          <button type="button" id="reset">Reset</button>
+        </div>
+      </form>
+    </section>
+  </div>
 
-    <script type="module" src="/src/main.js"></script>
-  </body>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>

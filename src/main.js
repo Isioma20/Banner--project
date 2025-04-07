@@ -18,7 +18,7 @@ const imagePreview = document.getElementById("image-preview");
 const previewImg = document.getElementById("preview-img");
 
 const originalValues = {
-  backgroundColor: "#2563eb", // Updated to match our new primary color
+  backgroundColor: "#2563eb", 
   textColor: "#ffffff",
   bannerStyle: "default",
   bannerText: bannerText.textContent,
@@ -27,7 +27,7 @@ const originalValues = {
 };
 
 let newImageSource = null;
-let activeImageMethod = "url"; // 'url' or 'upload'
+let activeImageMethod = "url"; 
 
 function initImageTabs() {
   tabButtons.forEach((btn) => {
@@ -109,7 +109,7 @@ function applyChanges() {
     bannerTitle.style.color = textColorInput.value;
     bannerText.style.color = textColorInput.value;
 
-    banner.className = "banner"; 
+    banner.className = "banner banner-flex"; 
 
     if (customTextArea.value.trim() !== "") {
       bannerText.textContent = customTextArea.value;
@@ -160,7 +160,7 @@ function resetBanner() {
     newImageSource = null;
     imagePreview.classList.remove("active");
 
-    banner.className = "banner";
+    banner.className = "banner banner-flex";
     banner.style.backgroundColor = originalValues.backgroundColor;
     banner.style.color = originalValues.textColor;
     bannerTitle.style.color = "";

@@ -1,5 +1,4 @@
-
-  {
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -44,7 +43,7 @@
   
   .banner {
     width: 100%;
-    padding: 60px 40px;
+    padding: 40px 24px;
     margin-bottom: 40px;
     background-color: var(--color-primary);
     color: white;
@@ -80,13 +79,44 @@
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-md);
     transition: var(--transition);
-    max-height: 450px;
+    max-height: 240px;
     transform: translateY(0);
   }
   
   .banner img:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+  }
+
+  .banner-flex{
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: 769px) {
+    .banner-flex{
+      flex-direction: row;
+      gap: 24px;
+    }
+
+    .banner-flex div{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .banner-flex div:nth-child(1){
+      width: 70%;
+    }
+
+    .banner-flex div:nth-child(2){
+      width: 30%;
+    }
+
+    .banner-flex img{
+      width: 100%;
+    }
   }
   
   .controls {

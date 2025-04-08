@@ -1,6 +1,6 @@
-##Live Link: 🔗
-https://wikibanner.vercel.app/ 
-A simple frontend project with an interactive banner and form controls. 
+ A simple frontend project with an interactive banner and form controls. 
+## Live Link: 🔗
+https://wikibanner.vercel.app/
 ## Features 
 - Full width dynamic banner about my favourite hobby: Reading books.
 - Interactive form to change banner appearance 

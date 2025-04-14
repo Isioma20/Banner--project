@@ -1,9 +1,14 @@
 describe("Banner customization functionality", () => {
   document.body.innerHTML = `
-    <section id="banner" class="banner">
-      <h1 id="banner-title">Reading - Exploring Countless Worlds Through Books</h1>
-      <p id="banner-text">Reading transports me to endless universes and perspectives.</p>
-      <img id="banner-image" src="https://example.com/books.jpg" alt="Books">
+ <div class="container">
+    <section id="banner" class="banner banner-flex">
+      <div>
+      <h1 id="banner-title">Books are the gateway to the mind</h1>
+        <p id="banner-text">Through books, I discover new ideas, cultures, and emotions that enrich my understanding of the world. I can take a sneak peak into the minds of others and explore their thoughts.</p>
+      </div>
+      <div>
+        <img id="banner-image" src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?q=80&w=500" alt="an image describing the content of the banner" />
+      </div>
     </section>
     <form id="banner-controls">
       <input type="color" id="background-color" value="#2563eb">
@@ -15,7 +20,6 @@ describe("Banner customization functionality", () => {
       </select>
       <textarea id="custom-text"></textarea>
       
-      <!-- Image controls for testing -->
       <div class="image-input-tabs">
         <button type="button" class="tab-btn active" data-tab="url">Image URL</button>
         <button type="button" class="tab-btn" data-tab="upload">Upload Image</button>
@@ -100,7 +104,7 @@ describe("Banner customization functionality", () => {
     banner.style.color = "#ffffff";
     banner.className = "banner";
     bannerText.textContent =
-      "Reading transports me to endless universes and perspectives.";
+      "Through books, I discover new ideas, cultures, and emotions that enrich my understanding of the world. I can take a sneak peak into the minds of others and explore their thoughts.";
     backgroundColorInput.value = "#2563eb";
     textColorInput.value = "#ffffff";
     customTextArea.value = "";
@@ -155,7 +159,7 @@ describe("Banner customization functionality", () => {
     expect(banner.style.color).toBe("rgb(255, 255, 255)"); 
     expect(banner.className).toBe("banner");
     expect(bannerText.textContent).toBe(
-      "Reading transports me to endless universes and perspectives."
+      "Through books, I discover new ideas, cultures, and emotions that enrich my understanding of the world. I can take a sneak peak into the minds of others and explore their thoughts."
     );
   });
 
